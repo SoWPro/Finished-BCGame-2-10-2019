@@ -1,0 +1,169 @@
+Okay, well I'm going to start typing a dictionary for C++ coding for Unreal engine
+
+I'm going to start on a video from Udemy, it's there lesson on unreal. I should have it in my udemy account.
+
+structure of a function.
+	a function is a group of code that accomplishes a task of some sort.(seems to be only able to take 5 variable at a time.)
+Ex.
+int DoubleMe(int number)
+{
+	return number*2;
+}
+
+So the first line is what while be returned to another program that is calling ours. So in this case it Returns a number or int to another function. 
+The parenthesis or () is the info that is passed in or an int. The int number is an  that is passed into a holder called number. Example of what the holder has in it, a number like 8.
+
+Larger concepts  to know
+
+	Example used in course.
+	<return type> (<"passing in" parameters>)
+	{
+		<statement "aka what you make info do. Example above times everythign by 2">
+	}
+
+		<>= fill in section
+		 ""= my additional words/things so I can understand them better.
+
+Words to know/understand 
+
+	_* = means that these are word that you can actually use in C++ coding. For example: For(I=0;I>=10;I++) will give you a process that loops over and over until I reaches 10 or above. 
+
+	Libraries in IdE= Integrated development Environment(or microsoft visual studios.)
+	Std_* = is a part of namespace, Std means standard, It's part of a subsection of iostream library
+	::_*= allows to go inside namespace or an Std or in other words an accessor, an item that allows you to go into something else like a key
+	cout_*= allows you to print word/items out on a dos screen
+ 	IdE= Integrated development Environment(or microsoft visual studios.)
+	<<_* = means take the info giving and put it back into the items before Ex. std::cout << "Welcome to Bulls and Cows";
+	\n_* = means start on a new line with in a sentence Example: without: Welcome to bulls and cowsPress and key to continue
+								   with: Welcome to Bulls and Cows
+									 Press any key to continue
+	endl_*= \n but goes afterstd ex. std::cout << std::endl; Either line bellow or behind original.
+	Using_*= allows us to not have to repetedly put in std all the time Ex. Using
+	cin_* = how to collect input from user, atleast in text form. Located in the #include <String> library
+	string_* = a coding structure that allow use to create a parking space for text/words
+	getline()_* = a way to look through new info. Things it will do: read through any space by default, it will discard input stream once it reaches the newline character	
+	Main_*= entry point for the application
+	for_* = a loop or repeating process, best way to differenciate, if you know how many times you want to loop use for. My thoughts when numbers are in use.	
+	while_* = a loop or repeating process, best way to differenciate, if you are clueless on how many times to loop use while. My thoughts when true or false statement are in use.
+	bool_*= or bollean is true or false statement
+	==_* = or if you put 2 equal signs together. That is a comparison operator.
+	' '_* = is for character or a letter of the alphabet.
+	" "_* = or is for string or a sentence in the English language.
+	[n]_* * =  n is for number, however this group of symbols is used to acces a string, starting at n=0;
+	class or type = packages together functions and varriables so that you can talk to it like it's a black box. Guess you put stuff in and other stuff comes out. Represent concept, or actual object. 
+	functions = smaller methods that do a specific job EX. bellow:
+		oid PrintIntro() {
+				//introduce the game
+				constexpr int WORD_LENGTH = 5;
+				cout << "Welcome to Bulls and Cows, a fun word game.\n";
+				cout << "Can you guess the " << WORD_LENGTH << " letter isogram I'm thinking of?\n";
+				return;
+				 }		
+	public_* = function or items other programs can call or can see
+	private_* = items that are not seen or are just used in this program
+	instantiate = starting of something new
+	const_* = generally means "I promise not to change this", but depends on where it is put. Ex: int GetCurrentTry() const; Prevents the function from modifying any member variables. Also is a good safety feature. This also only works with class function. Look at Bull Cow game header file. Guard against something that shouldn't be changed. needs in all place of method name
+	using_* = way of subsituting other items like String to FString. 
+	FText_* = mainly what you use in unreal for player interaction.
+	.length or .size_*= are two components of the #include <string> library. They seem to be components of the library that you can call to find the size/lenght. There appears to be different types of this for different libraries or items like Ftext rather than Fstring. 
+	enum_* = enumerate which means, It starts with E because of unreals coding standards,(I think it actaually allows a coder to access words like OK, or Not_Isogram). The meaning is that you can pass back richer information types rather than just true or false, or a number. Gives you a larger type of info coming back.
+		Other items, You can't have similar words in to different enumerations or enum. So you can't use okay twice unless it's global. or if you change it into a enum class.
+	auto_* = (if I understand this correctly) is the programmer allowing the computer to  pick the necessary type(char, int, String?(unsure)) rather than the programmer picking it. This is better used on the bottom of a program. That what he say, but it sounds like it's can be better used in a method rather than when you are wanting to know what's passed into a method. 
+	Tolower(Name_of_String_or_Char)_*= allows you to change letters to lower case. The Toupper will allow you to change letter to upper case.
+	implicit dependency- where code relys on the above part to fire. So if you have a bunch of if else statemenent, all them should beable to run independently of each other.
+	constexpr_*= similar to const(making something a constant/not changing) but can be used on functions and classes
+	#define_* = is a textural identifier to swap a library. Example there's a library in c++, #include <map>. If I want to change to change that word to something like %map, I would need to #define it. Why, this case it make it similar to the Unreal coding standards.
+	Big O notation= general idea is the speed it takes for an algorithm to compute.
+	
+Libraries and what they do
+ 	#include <iostream>= write to console with alot of other functions. contains cout
+	#include <string> = allows to give input to a string  and other functions. contains cin
+	#pragma once= that anything that is imported is only imported once	
+
+Structures
+	Do while loops = a repetative operation until something cancels it out.
+		 do
+		{
+			<the code you want to repeat>
+		}
+		While(some code);
+	
+	Struct= similar to class but simple and is public.
+		struct FBullCowCount
+		{
+			int32 Bulls = 0;
+			int32 Cows = 0;
+		};
+
+	If else statements	
+		If(condition1){
+		statements;
+		} else if (condition2){
+		statements;
+		} else {
+		statements;
+		]
+	
+
+	Switch statement
+		switch(expression) //expression is what we switch based on
+		{
+			case constant1;
+				statement(s);
+				break;
+			case constant2:
+				statement(s);
+				break;
+			default:
+				statement(s);
+		}
+
+	std::map syntax(using unreal coding standards)
+		Tmap<char, bool> LetterSeem;= to declare a map
+			LetterSeen[Letter] = to access or allow map to run
+
+	Range based for loop(or a loop that can go through a string)
+		for(char Letter : Word)
+		for(type It's_name :(colon means in) String_that_you_are_going_through)		
+
+Other notes
+Pseudocode programing or PPP = the english or higher level programing. In other words, you use english words and structure to understand what you are going to do. Example: if I want a compound interest calculator the basic main(or my opinion the first step) would be to find the compound interest formula. Create a main part of program. have it print out the answer of I already know all the numbers to.
+The sentence before this one would be an example of pseudocode programming.
+
+Debugging is a process of correcting code/logic errors
+	For Breaks or stopping code for debugging. Click on the left hand side of visual studio or left of the numbered line Ex: *__27. Something similar to this happens after you click. 
+
+Constructors = a method that creates or a base item. The anology the teacher used was if it's a computer coming off the assembly line the constructor is the dell software being put on a computer.
+
+Abstraction and encapsulation
+	Software goal is to manage complexity
+
+	Abstraction= is  a technique for managing complexity, by  considering things at a higher level	
+
+	Encapsulation= a way to make your abstractions is adherd to. I think it's more of breaking things down into smaller peices. So that you can work on them.
+
+Methods = functions.
+
+If you left click on a word, once, you want to change and the press ctrl and r twice. You can start the process to replace that word in entire program.
+
+How to change code method that visual studios produces for you
+	Go to tool tab, then options.
+	text editor C++
+	formatting
+	Newline
+	look for position of braces function in file
+		click move to a new line
+
+how to create a class in visual studios.
+	go to Solution explorer(generally on side of screen)
+		click on Name of program. I'm working on a game called bullcowGame. So I would Right click. Go to Add New item. Go with a header file or .h
+
+header files are just contracts
+
+If it's a library, when you use <>, #include <iostream>.
+If it's your own creating you use "", #include "FBullCowGame.h"
+
+Things I would like to find out about
+#include "stdafx.h"=???
+const
+constexp= I'm guessing a global item, needs a type right after constexp. It needs to know what the int or bool or whatever it is.
