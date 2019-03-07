@@ -1,0 +1,17 @@
+bool FBullCowGame::IsLowercase(FString WordL) const
+{
+	
+	for (auto Letter : WordL) //for all letters of the word
+	{
+		
+
+		if (!islower(Letter))//if not a lowercase letter
+		{
+			return false;// we do NOT have an isogram
+		}
+		  
+	}
+
+
+	return true;// for example in cases where /0 is entered
+}
